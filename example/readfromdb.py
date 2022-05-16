@@ -7,7 +7,7 @@ def write_file(data, filename):
         file.write(data)
 
 
-def readBLOB(emp_id, photo, bioData):
+def readBLOB():
     print("Reading BLOB data from python_employee table")
 
     try:
@@ -41,7 +41,6 @@ def readBLOB(emp_id, photo, bioData):
             print("MySQL connection is closed")
 
 
-readBLOB(1, "D:\\UL\\mgr\\fromDB\\eric_photo.png",
-          "D:\\UL\\mgr\\fromDB\\eric_bioData.txt")
+readBLOB()
 # readBLOB(2, "D:\\UL\\mgr\\fromDB\\scott_photo.png",
 #          "D:\\UL\\mgr\\fromDB\\scott_bioData.txt")
