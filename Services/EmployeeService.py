@@ -17,7 +17,7 @@ def addNewEmployee(employee):
 
 # edit po showAllUser
 def editEmployee(employee):
-    # TODO: zmodyfikowac calosc
+    # TODO: zmodyfikowac calosc editEmployee po showalluser
     record, condition = executeSQLCommand(""" UPDATE Employee SET 
      (firstName, secondName, surname, dateOfBirth, position, endContract) VALUES (%s,%s,%s,%s,%s,%s)
      WHERE id=%s""", employee)
