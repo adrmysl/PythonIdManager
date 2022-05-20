@@ -1,5 +1,4 @@
 import mysql.connector
-from datetime import datetime
 
 
 def executeSQLCommand(command, element=None):
@@ -17,9 +16,6 @@ def executeSQLCommand(command, element=None):
             result = cursor.fetchall()
         else:
             cursor = connection.cursor()
-            employee = element.__dict__
-            employee['dateOfBirth'] = datetime.strptime(employee['dateOfBirth'], '%d.%m.%Y').isoformat()
-            employee['endContract'] = datetime.strptime(employee['endContract'], '%d.%m.%Y').isoformat()
             result = cursor.execute(command, tuple(element.__dict__.values()))
             connection.commit()
         return result, True
