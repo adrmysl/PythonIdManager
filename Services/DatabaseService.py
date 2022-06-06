@@ -16,7 +16,11 @@ def executeSQLCommand(command, element=None):
             result = cursor.fetchall()
         else:
             cursor = connection.cursor()
-            result = cursor.execute(command, tuple(element.__dict__.values()))
+            if type(element) is dict:
+                a = tuple(element.values())
+                result = cursor.execute(command, tuple(element.values()))
+            else:
+                result = cursor.execute(command)
             connection.commit()
         return result, True
     except mysql.connector.Error as error:
