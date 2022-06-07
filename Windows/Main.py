@@ -4,6 +4,7 @@ import PySimpleGUI as sg
 
 from Models.Employee import Employee
 from Services.EmployeeService import addNewEmployee, editEmployee, deleteEmployee
+from Windows.AddNewCardTab import AddNewCard
 from Windows.AddUserTab import AddNewUser, EditUser
 from Windows.ShowAllEmployees import ShowAllEmployees
 
@@ -51,7 +52,7 @@ def checkInput(newEmployee, infoBar):
 
 
 selectedEmployee = {}
-window, employees = ShowAllEmployees()
+window = AddNewCard()
 
 
 while True:
