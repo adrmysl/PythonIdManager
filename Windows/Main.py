@@ -95,5 +95,3 @@ while True:
             deleteEmployee(selectedEmployee)
             window.close()
             window, employees = ShowAllEmployees()
-
-

@@ -17,7 +17,6 @@ def executeSQLCommand(command, element=None):
         else:
             cursor = connection.cursor()
             if type(element) is dict:
-                a = tuple(element.values())
                 result = cursor.execute(command, tuple(element.values()))
             else:
                 result = cursor.execute(command)
